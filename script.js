@@ -36,7 +36,7 @@ enableButtons();
 async function setPokemonData(id) {
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
     const data = await response.json();
-    let height = data["height"] / 10;
+    let height = (data["height"] / 10).toFixed(1);
     let weight = (data["weight"] / 10).toFixed(1);
     displayMode = "data";
 

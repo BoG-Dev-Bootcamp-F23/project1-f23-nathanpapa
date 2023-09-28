@@ -125,3 +125,7 @@ button {
 #dataColumn {
     width: 25%;
 }
+
+button img {
+    height: 100%;
+}
