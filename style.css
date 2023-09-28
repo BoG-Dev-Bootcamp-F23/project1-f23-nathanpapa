@@ -1,27 +1,59 @@
-html {
-    width: 100%;
+html, body {
+    height: 100%;
+    font-family: Inter, Arial, serif;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
     height: 100%;
 }
 
-body {
-    font-family: "Inter";
+#mainContainer {
     height: 100%;
     width: 100%;
 }
 
-h1 {
-    text-align: center;
-    font-size: 40px;
-}
-
-#container {
+.column {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    width: 100%;
+    justify-content: space-between;
+    height: 90%;
+    width: 30vw;
 }
 
-#content {
-    display: flex;
-    height: 75%;
+h1, h2 {
+    text-align: center;
+    margin: 0 auto 5% auto;
+}
+
+.buttonsContainer {
+    height: auto;
+}
+
+#pokemonData {
+    height: 50vh;
+    width: 20vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+    justify-content: flex-start;
+    align-self: center;
+    background-color: lightgrey;
+}
+
+#pokemonTypeContainer {
+    height: 10%;
+}
+
+#pokemonName {
+    text-align: center;
+    font-size: 3vh;
+    background-color: lightgrey;
+    border: solid 1px #505050;
+    border-radius: .2em;
+}
+
+#pokemonType {
+    width: 55%;
+    justify-content: space-between;
 }
