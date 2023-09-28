@@ -23,29 +23,36 @@ html, body {
     width: 30vw;
 }
 
+p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+}
+
 h1, h2 {
     text-align: center;
-    margin: 0 auto 5% auto;
+    margin: 0 auto;
 }
 
 h1 {
-    margin-top: 1%;
+    margin: 1% auto 2% auto;
+    font-size: 40px;
 }
 
 .buttonsContainer {
-    height: auto;
+    height: 10%;
 }
 
 button {
-    font-size: 1vw;
-    border: 1px solid #AAAAAA;
-    border-radius: .2em;
-    width: 4vw;
-    height: 4vh;
+    font-size: 20px;
+    border: 1px solid transparent;
+    border-radius: .5em;
+    width: 8vw;
+    height: 6vh;
 }
 
 #infoButton {
-    background-color: lime;
+    background-color: #7CFF79;
 }
 
 #pokemonData {
@@ -55,7 +62,8 @@ button {
     overflow-x: hidden;
     justify-content: flex-start;
     align-self: center;
-    background-color: lightgrey;
+    padding: 5%;
+    background-color: #E8E8E8;
 }
 
 #pokemonPicture {
@@ -99,4 +107,8 @@ button {
 #pokemonType div span {
     display: flex;
     font-size: 2vh;
+}
+
+#pictureColumn {
+    width: auto;
 }

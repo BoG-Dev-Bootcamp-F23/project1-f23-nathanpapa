@@ -84,13 +84,13 @@ async function setMoves(id) {
 
 infoButton.addEventListener("click", () => {
     setPokemonData(id);
-    infoButton.style.backgroundColor = "lime";
+    infoButton.style.backgroundColor = "#7CFF79";
     movesButton.style.backgroundColor = "initial";
 });
 
 movesButton.addEventListener("click", () => {
     setMoves(id);
-    movesButton.style.backgroundColor = "lime";
+    movesButton.style.backgroundColor = "#7CFF79";
     infoButton.style.backgroundColor = "initial";
 });
 
@@ -118,7 +118,7 @@ function enableButtons() {
     if (id == 1) {
         backButton.disabled = true;
         forwardButton.disabled = false;
-    } else if (id == 1017) {
+    } else if (id == 1010) {
         forwardButton.disabled = true;
         backButton.disabled = false;
     } else {
