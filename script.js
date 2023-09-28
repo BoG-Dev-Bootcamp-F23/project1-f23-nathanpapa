@@ -30,6 +30,7 @@ const colors = {
 
 let id = 1;
 setPokemonData(id);
+enableButtons();
 
 async function setPokemonData(id) {
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
@@ -88,3 +89,34 @@ movesButton.addEventListener("click", () => {
     movesButton.style.backgroundColor = "lime";
     infoButton.style.backgroundColor = "initial";
 });
+
+backButton.addEventListener("click", () => {
+    if (infoButton.style.backgroundColor == "lime") {
+        setPokemonData(--id);
+    } else {
+        setMoves(--id);
+    }
+    enableButtons();
+});
+
+forwardButton.addEventListener("click", () => {
+    if (infoButton.style.backgroundColor == "lime") {
+        setPokemonData(++id);
+    } else {
+        setMoves(++id);
+    }
+    enableButtons();
+});
+
+function enableButtons() {
+    if (id == 1) {
+        backButton.disabled = true;
+        forwardButton.disabled = false;
+    } else if (id == 1017) {
+        forwardButton.disabled = true;
+        backButton.disabled = false;
+    } else {
+        forwardButton.disabled = false;
+        backButton.disabled = false;
+    }
+}
