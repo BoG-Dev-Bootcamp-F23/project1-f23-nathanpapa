@@ -58,3 +58,33 @@ async function setPokemonData(id) {
         </div>`;
     }
 }
+
+async function setMoves(id) {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+    const data = await response.json();
+    pokemonData.innerHTML = "";
+    pokemonPicture.src = `${data["sprites"]["front_default"]}`;
+    pokemonName.textContent = `${data["name"]}`;
+    for (let i = 0; i < data["moves"].length; i++) {
+        pokemonData.innerHTML += `<p>${data["moves"][i]["move"]["name"]}</p>`;
+    }
+    pokemonType.innerHTML = "";
+    for (let i = 0; i < data["types"].length; i++) {
+        pokemonType.innerHTML += `
+        <div style="background-color: ${colors[data["types"][i]["type"]["name"]]}; border-radius: .2em; width: 6.5vw; height: 3.5vh; display: flex; align-items: center; justify-content: center;">
+            <span style="font-size: 2vh; display: flex;">${data["types"][i]["type"]["name"]}</span>
+        </div>`;
+    }
+}
+
+infoButton.addEventListener("click", () => {
+    setPokemonData(id);
+    infoButton.style.backgroundColor = "lime";
+    movesButton.style.backgroundColor = "initial";
+});
+
+movesButton.addEventListener("click", () => {
+    setMoves(id);
+    movesButton.style.backgroundColor = "lime";
+    infoButton.style.backgroundColor = "initial";
+});

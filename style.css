@@ -36,6 +36,14 @@ h1 {
     height: auto;
 }
 
+button {
+    font-size: 1vw;
+    border: 1px solid #AAAAAA;
+    border-radius: .2em;
+    width: 4vw;
+    height: 4vh;
+}
+
 #pokemonData {
     height: 50vh;
     width: 20vw;
