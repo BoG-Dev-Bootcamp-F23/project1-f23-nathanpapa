@@ -1,36 +1,35 @@
 <!DOCTYPE html>
-<html id="page" lang="en-us" data-theme="dark">
+<html lang="en-us">
     <head>
         <title>Mini Pokedex</title>
-        <link rel="stylesheet" href="style.css">
+        <link href="style.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-        <div id="container">
+        <div id="mainContainer" class="container column">
             <h1>Bits of Good Mid-Semester Project</h1>
-            <div id="content">
-                <div class="pane">
-                    <img />
-                    <p>Pokemon Name</p>
-                    <p id="types">Types</p>
-                    <div id="type-box">
-    
+            <div class="container">
+                <div class="container column">
+                    <img id="pokemonPicture" alt="Pokemon Picture" />
+                    <p id="pokemonName"></p>
+                    <div id="pokemonTypeContainer" class="container column">
+                        <h3 id="typesLabel">Types:</h3>
+                        <div id="pokemonType" class="container"></div>
                     </div>
-                    <div class="button-box">
-                        <button>&lt;</button>
-                        <button>&gt;</button>
+                    <div class="container buttonsContainer">
+                        <button id="backButton">&lt;</button>
+                        <button id="forwardButton">&gt;</button>
                     </div>
                 </div>
-                <div class="pane">
-                    <div id="pokemon-info">
-    
-                    </div>
-                    <div class="button-box">
-                        <button>Info</button>
-                        <button>Moves</button>
+                <div class="container column">
+                    <h2>Info</h2>
+                    <div id="pokemonData" class="container column"></div>
+                    <div class="container buttonsContainer">
+                        <button id="infoButton">Info</button>
+                        <button id="movesButton">Moves</button>
                     </div>
                 </div>
             </div>
         </div>
-        <script type="text/javascript" src="script.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>
