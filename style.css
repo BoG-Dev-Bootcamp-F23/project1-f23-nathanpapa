@@ -5,7 +5,7 @@ html, body {
 
 .container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     height: 100%;
 }
 
@@ -19,8 +19,9 @@ html, body {
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
-    height: 90%;
-    width: 30vw;
+    height: 95%;
+    width: 30%;
+    box-sizing: border-box;
 }
 
 p {
@@ -29,26 +30,29 @@ p {
     font-weight: 400;
 }
 
-h1, h2 {
+h2 {
     text-align: center;
     margin: 0 auto;
+    font-size: 23px;
 }
 
 h1 {
-    margin: 1% auto 2% auto;
+    margin: 2% auto 2% auto;
     font-size: 40px;
 }
 
 .buttonsContainer {
     height: 10%;
+    margin-top: 6%;
+    justify-content: space-evenly;
 }
 
 button {
-    font-size: 20px;
+    font-size: 22px;
     border: 1px solid transparent;
-    border-radius: .5em;
-    width: 8vw;
-    height: 6vh;
+    border-radius: .3em;
+    width: 35%;
+    height: 75%;
 }
 
 #infoButton {
@@ -56,8 +60,8 @@ button {
 }
 
 #pokemonData {
-    height: 50vh;
-    width: 20vw;
+    height: 70%;
+    width: 100%;
     overflow-y: auto;
     overflow-x: hidden;
     justify-content: flex-start;
@@ -75,11 +79,13 @@ button {
 
 #pokemonTypeContainer {
     height: 10%;
+    width: 50%;
+    justify-content: space-between;
 }
 
 #pokemonName {
     text-align: center;
-    font-size: 3vh;
+    font-size: 25px;
     background-color: lightgrey;
     border: solid 1px #505050;
     border-radius: .2em;
@@ -91,8 +97,9 @@ button {
 }
 
 #pokemonType {
-    width: 55%;
+    width: 100%;
     justify-content: space-between;
+    height: 25%;
 }
 
 #pokemonType div {
@@ -109,6 +116,6 @@ button {
     font-size: 2vh;
 }
 
-#pictureColumn {
-    width: auto;
+#dataColumn {
+    width: 25%;
 }

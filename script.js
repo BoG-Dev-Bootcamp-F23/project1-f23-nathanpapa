@@ -85,13 +85,13 @@ async function setMoves(id) {
 infoButton.addEventListener("click", () => {
     setPokemonData(id);
     infoButton.style.backgroundColor = "#7CFF79";
-    movesButton.style.backgroundColor = "initial";
+    movesButton.style.backgroundColor = "#E8E8E8";
 });
 
 movesButton.addEventListener("click", () => {
     setMoves(id);
     movesButton.style.backgroundColor = "#7CFF79";
-    infoButton.style.backgroundColor = "initial";
+    infoButton.style.backgroundColor = "#E8E8E8";
 });
 
 backButton.addEventListener("click", () => {
@@ -105,10 +105,8 @@ backButton.addEventListener("click", () => {
 
 forwardButton.addEventListener("click", () => {
     if (displayMode === "data") {
-        console.log("data");
         setPokemonData(++id);
     } else {
-        console.log("moves?");
         setMoves(++id);
     }
     enableButtons();
