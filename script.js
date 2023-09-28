@@ -28,7 +28,7 @@ const colors = {
     fairy: "#D685AD"
 };
 
-let id = 1;
+let id = 132;
 let displayMode = "data";
 setPokemonData(id);
 enableButtons();
@@ -37,7 +37,7 @@ async function setPokemonData(id) {
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
     const data = await response.json();
     let height = data["height"] / 10;
-    let weight = data["weight"] / 10;
+    let weight = (data["weight"] / 10).toFixed(1);
     displayMode = "data";
 
     pokemonData.innerHTML = `

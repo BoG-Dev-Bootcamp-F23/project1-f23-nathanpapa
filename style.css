@@ -78,22 +78,28 @@ button {
 }
 
 #pokemonTypeContainer {
-    height: 10%;
+    height: auto;
     width: 50%;
     justify-content: space-between;
 }
 
-#pokemonName {
-    text-align: center;
+#pokemonNameContainer {
+    display: flex;
     font-size: 25px;
     background-color: lightgrey;
     border: solid 1px #505050;
     border-radius: .2em;
     margin: 0;
+    height: 7%;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    align-self: center;
 }
 
 #typesLabel {
     margin: 0;
+    font-size: 16px;
 }
 
 #pokemonType {
