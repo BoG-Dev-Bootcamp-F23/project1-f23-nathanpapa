@@ -29,6 +29,7 @@ const colors = {
 };
 
 let id = 1;
+let displayMode = "data";
 setPokemonData(id);
 enableButtons();
 
@@ -37,6 +38,7 @@ async function setPokemonData(id) {
     const data = await response.json();
     let height = data["height"] / 10;
     let weight = data["weight"] / 10;
+    displayMode = "data";
 
     pokemonData.innerHTML = `
         <p>height: ${height}m</p>
@@ -63,6 +65,8 @@ async function setPokemonData(id) {
 async function setMoves(id) {
     const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
     const data = await response.json();
+    displayMode = "moves";
+
     pokemonData.innerHTML = "";
     pokemonPicture.src = `${data["sprites"]["front_default"]}`;
     pokemonName.textContent = `${data["name"]}`;
@@ -91,7 +95,7 @@ movesButton.addEventListener("click", () => {
 });
 
 backButton.addEventListener("click", () => {
-    if (infoButton.style.backgroundColor == "lime") {
+    if (displayMode === "data") {
         setPokemonData(--id);
     } else {
         setMoves(--id);
@@ -100,9 +104,11 @@ backButton.addEventListener("click", () => {
 });
 
 forwardButton.addEventListener("click", () => {
-    if (infoButton.style.backgroundColor == "lime") {
+    if (displayMode === "data") {
+        console.log("data");
         setPokemonData(++id);
     } else {
+        console.log("moves?");
         setMoves(++id);
     }
     enableButtons();
