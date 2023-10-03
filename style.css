@@ -78,7 +78,7 @@ button {
 }
 
 #pokemonTypeContainer {
-    height: auto;
+    height: 10%;
     width: 50%;
     justify-content: space-between;
 }
@@ -100,19 +100,20 @@ button {
 #typesLabel {
     margin: 0;
     font-size: 15px;
+    display: flex;
 }
 
 #pokemonType {
     width: 100%;
     justify-content: space-between;
-    height: 25%;
+    align-items: flex-end;
 }
 
 #pokemonType div {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 5.5vw;
+    width: 45%;
     height: 3.5vh; 
     border-radius: .3em;  
 }

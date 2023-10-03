@@ -78,7 +78,7 @@ async function setMoves(id) {
     pokemonType.innerHTML = "";
     for (let i = 0; i < data["types"].length; i++) {
         pokemonType.innerHTML += `
-        <div style="background-color: ${colors[data["types"][i]["type"]["name"]]}; border-radius: .2em; width: 6.5vw; height: 3.5vh; display: flex; align-items: center; justify-content: center;">
+        <div style="background-color: ${colors[data["types"][i]["type"]["name"]]};">
             <span style="font-size: 2vh; display: flex;">${data["types"][i]["type"]["name"]}</span>
         </div>`;
     }
