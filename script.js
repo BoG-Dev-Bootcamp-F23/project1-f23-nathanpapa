@@ -28,7 +28,7 @@ const colors = {
     fairy: "#D685AD"
 };
 
-let id = 132;
+let id = 1;
 let displayMode = "data";
 setPokemonData(id);
 enableButtons();
