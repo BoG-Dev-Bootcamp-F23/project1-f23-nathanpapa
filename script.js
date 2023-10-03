@@ -70,8 +70,10 @@ async function setMoves(id) {
     pokemonData.innerHTML = "";
     pokemonPicture.src = `${data["sprites"]["front_default"]}`;
     pokemonName.textContent = `${data["name"]}`;
-    for (let i = 0; i < data["moves"].length; i++) {
-        pokemonData.innerHTML += `<p>${data["moves"][i]["move"]["name"]}</p>`;
+    for (let i = 0; i < 13; i++) {
+        if (i < data.moves.length) {
+            pokemonData.innerHTML += `<p>${data["moves"][i]["move"]["name"]}</p>`;
+        }
     }
     pokemonType.innerHTML = "";
     for (let i = 0; i < data["types"].length; i++) {
