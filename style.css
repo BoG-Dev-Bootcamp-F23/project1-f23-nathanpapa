@@ -72,9 +72,9 @@ button {
 
 #pokemonPicture {
     display: flex;
-    width: 80%;
+    width: 100%;
     align-self: center;
-    border: solid 3px black;
+    border: solid 2px black;
 }
 
 #pokemonTypeContainer {
@@ -86,20 +86,20 @@ button {
 #pokemonNameContainer {
     display: flex;
     font-size: 25px;
-    background-color: lightgrey;
-    border: solid 1px #505050;
+    background-color: #E8E8E8;
+    border: solid 1px black;
     border-radius: .2em;
     margin: 0;
     height: 7%;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 100%;
     align-self: center;
 }
 
 #typesLabel {
     margin: 0;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 #pokemonType {
@@ -112,9 +112,9 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 6.5vw;
+    width: 5.5vw;
     height: 3.5vh; 
-    border-radius: .2em;  
+    border-radius: .3em;  
 }
 
 #pokemonType div span {
@@ -128,4 +128,8 @@ button {
 
 button img {
     height: 100%;
+}
+
+#pictureColumn {
+    width: 25%;
 }
